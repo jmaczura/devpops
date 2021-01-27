@@ -841,8 +841,8 @@ BCRMViewLog = function () {
     var value = $("#developer_log").text();
     $("#developer_log").remove();
     //var dtitle = "<h3>" + "SQL Trace" + "</h3>";
-    var cm = $("<div id='bcrm_cm' style='height:400px;'>");
-    var dlg = $("<div style='overflow:auto;'>");
+    var cm = $("<div id='bcrm_cm'>");
+    var dlg = $("<div style='overflow:none;'>");
     //dlg.append(dtitle);
     dlg.append(cm);
 
@@ -878,6 +878,7 @@ BCRMViewLog = function () {
             value: value,
             mode: "sql"
         });
+        $("#bcrm_cm").children("div").css("height", "500px");
     }, 100);
 };
 
